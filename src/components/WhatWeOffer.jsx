@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calculator, LineChart, Lightbulb, BookOpen, Landmark, Award } from 'lucide-react';
+import { HandHeart, Briefcase, LineChart } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <div className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
@@ -15,34 +15,19 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 const WhatWeOffer = () => {
   const features = [
     {
-      icon: Calculator,
-      title: "EMI Calculator",
-      description: "Plan your finances with our easy-to-use EMI calculator and understand your repayment schedule."
+      icon: HandHeart,
+      title: "NGO Support",
+      description: "Connect with NGOs that provide financial aid and mentorship programs for students from various backgrounds."
+    },
+    {
+      icon: Briefcase,
+      title: "Internship Based Repayment",
+      description: "Our network of partner companies offers internship opportunities that can help you repay your educational loans."
     },
     {
       icon: LineChart,
-      title: "AI Repayment Plan",
-      description: "Get personalized repayment strategies based on your financial situation and future income."
-    },
-    {
-      icon: Lightbulb,
-      title: "Eligibility Check",
-      description: "Quickly check if you qualify for educational loans and discover the best options for your needs."
-    },
-    {
-      icon: BookOpen,
-      title: "Educational Resources",
-      description: "Access comprehensive guides about student loans, financial literacy, and educational financing."
-    },
-    {
-      icon: Landmark,
-      title: "Institution Partnerships",
-      description: "Benefit from our partnerships with educational institutions and preferred interest rates."
-    },
-    {
-      icon: Award,
-      title: "Scholarship Guidance",
-      description: "Learn about scholarships that can complement your education loan and reduce your overall debt."
+      title: "Personal Finance Tracker",
+      description: "Track your expenses, set budget goals, and receive personalized suggestions to manage your finances effectively."
     }
   ];
 
@@ -55,7 +40,7 @@ const WhatWeOffer = () => {
             EduMadad provides comprehensive solutions to make educational financing accessible, transparent, and less stressful for students and their families.
           </p>
           <p className="text-muted-foreground mb-8">
-            Our AI-powered platform analyzes your profile and needs to provide tailored recommendations and actionable insights, helping you make informed decisions about your educational journey.
+            Our platform analyzes your profile and needs to provide tailored recommendations and actionable insights, helping you make informed decisions about your educational journey.
           </p>
           <a href="#register" className="btn-primary inline-flex items-center">
             Get Started
@@ -73,7 +58,7 @@ const WhatWeOffer = () => {
       </div>
       
       <div className="mt-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}

@@ -32,9 +32,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             <span className="font-poppins font-bold text-xl bg-gradient-to-r from-eduBlue-500 to-eduTeal-500 bg-clip-text text-transparent">EduMadad</span>
           </a>
           
-          {/* Navigation Links */}
+          {/* Navigation Links - Removed "Loan Eligibility" */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#eligibility" className="navbar-link">Loan Eligibility</a>
             <a href="#advisor" className="navbar-link">AI Repayment Plan</a>
             <a href="#calculator" className="navbar-link">EMI Calculator</a>
             <a href="#faq" className="navbar-link">FAQs</a>
