@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +16,8 @@ import FAQ from './components/FAQ';
 import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import LoanBuddy from './components/LoanBuddy';
+import RepaymentPlanAdvisor from './pages/RepaymentPlanAdvisor';
+import PersonalFinanceTracker from './pages/PersonalFinanceTracker';
 
 const queryClient = new QueryClient();
 
@@ -46,14 +48,20 @@ const App = () => {
         <BrowserRouter>
           <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
           
-          <main>
-            <Hero />
-            <WhatWeOffer />
-            <RegisterLogin />
-            <Testimonials />
-            <FAQ />
-            <AboutUs />
-          </main>
+          <Routes>
+            <Route path="/" element={
+              <main>
+                <Hero />
+                <WhatWeOffer />
+                <RegisterLogin />
+                <Testimonials />
+                <FAQ />
+                <AboutUs />
+              </main>
+            } />
+            <Route path="/repayment-plan-advisor" element={<RepaymentPlanAdvisor />} />
+            <Route path="/personal-finance-tracker" element={<PersonalFinanceTracker />} />
+          </Routes>
           
           <Footer />
           <LoanBuddy />

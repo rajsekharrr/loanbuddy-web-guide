@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,19 +26,19 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="bg-gradient-to-r from-eduBlue-500 to-eduTeal-500 w-10 h-10 rounded-md flex items-center justify-center">
               <span className="text-white font-bold text-xl">E</span>
             </div>
             <span className="font-poppins font-bold text-xl bg-gradient-to-r from-eduBlue-500 to-eduTeal-500 bg-clip-text text-transparent">EduMadad</span>
-          </a>
+          </Link>
           
-          {/* Navigation Links - Removed "Loan Eligibility" */}
+          {/* Navigation Links - Updated */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#advisor" className="navbar-link">AI Repayment Plan</a>
+            <a href="#eligibility" className="navbar-link">Check Loan Eligibility</a>
+            <Link to="/repayment-plan-advisor" className="navbar-link">AI Repayment Plan</Link>
             <a href="#calculator" className="navbar-link">EMI Calculator</a>
-            <a href="#faq" className="navbar-link">FAQs</a>
-            <a href="#about" className="navbar-link">About Us</a>
+            <Link to="/personal-finance-tracker" className="navbar-link">Personal Finance Tracker</Link>
           </div>
           
           {/* Dark Mode Toggle and Language Selector */}
@@ -56,7 +57,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
                 className="flex items-center space-x-1 rounded-full p-2 bg-muted hover:bg-muted/80 transition-colors"
               >
                 <Globe size={20} />
-                <span className="hidden sm:inline text-sm font-medium">{language}</span>
+                <span className="hidden sm:inline text-sm font-medium">Select Language</span>
               </button>
               
               {showLanguageDropdown && (
