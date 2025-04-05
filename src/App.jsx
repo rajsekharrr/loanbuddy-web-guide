@@ -22,24 +22,29 @@ import PersonalFinanceTracker from './pages/PersonalFinanceTracker';
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  
-  // Check for user's preferred color scheme on initial load
-  useEffect(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setIsDarkMode(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check localStorage first
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      return storedTheme === 'dark';
     }
-    
-    // Add dark class to body if dark mode is enabled
+    // Fallback to system preference
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+  
+  // Apply dark mode class
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   }, [isDarkMode]);
   
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(prev => !prev);
   };
 
   return (

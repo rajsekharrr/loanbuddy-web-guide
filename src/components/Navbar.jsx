@@ -33,7 +33,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             <span className="font-poppins font-bold text-xl bg-gradient-to-r from-eduBlue-500 to-eduTeal-500 bg-clip-text text-transparent">EduMadad</span>
           </Link>
           
-          {/* Navigation Links - Updated */}
+          {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/repayment-plan-advisor" className="navbar-link">AI Repayment Plan</Link>
             <a href="#calculator" className="navbar-link">EMI Calculator</a>
@@ -44,10 +44,11 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="rounded-full p-2 bg-muted hover:bg-muted/80 transition-colors"
+              className="rounded-full p-2 bg-muted hover:bg-muted/80 transition-colors relative flex items-center justify-center"
               aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              <Sun size={20} className={`absolute transition-opacity duration-300 ${isDarkMode ? 'opacity-0' : 'opacity-100'}`} />
+              <Moon size={20} className={`transition-opacity duration-300 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`} />
             </button>
             
             <div className="relative">
