@@ -16,10 +16,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 15%;
 
-    --primary: 210 100% 50%;
+    --primary: 215 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 100% 50%;
+    --secondary: 185 100% 45%;
     --secondary-foreground: 210 40% 15%;
 
     --muted: 210 30% 92%;
@@ -48,10 +48,10 @@
     --popover: 210 40% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 210 100% 50%;
+    --primary: 215 100% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 100% 35%;
+    --secondary: 185 100% 40%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 30% 20%;
@@ -85,11 +85,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-eduBlue-500 to-eduTeal-500 text-white font-semibold py-2 px-4 rounded-md hover:shadow-md transition-all duration-300;
+    @apply bg-gradient-to-r from-eduBlue-600 to-eduTeal-500 text-white font-semibold py-2 px-4 rounded-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px];
   }
   
   .card-hover {
-    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg border border-border/50;
   }
 
   .section-container {

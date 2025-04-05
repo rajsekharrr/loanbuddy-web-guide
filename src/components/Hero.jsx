@@ -15,9 +15,9 @@ const Hero = () => {
             Find the perfect educational loan, get personalized repayment plans, and make informed decisions with AI-powered guidance.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#eligibility" className="btn-primary">
-              Check Loan Eligibility
-            </a>
+            <Link to="/repayment-plan-advisor" className="btn-primary">
+              AI Repayment Plan
+            </Link>
             <a href="#calculator" className="bg-muted hover:bg-muted/80 text-foreground font-semibold py-2 px-4 rounded-md transition-all duration-300 flex items-center justify-center gap-2">
               <span>Learn More</span>
               <ArrowRight size={18} />
@@ -25,45 +25,45 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Loan Eligibility Section */}
-        <div id="eligibility" className="mt-16 relative">
+        {/* EMI Calculator Section */}
+        <div id="calculator" className="mt-16 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-eduBlue-500/20 to-eduTeal-500/20 rounded-xl transform rotate-1"></div>
           <div className="relative bg-card shadow-xl p-6 md:p-8 rounded-xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold font-poppins mb-4">
-                  Check if you qualify for an education loan
+                  Get a quick estimate for your student loan
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Provide some basic information about yourself, your academic record, and the institution you're planning to attend. We'll instantly check your eligibility for various loan options.
+                  Our EMI calculator helps you understand your repayment schedule before you commit to a loan.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div className="bg-muted p-4 rounded-lg">
-                    <div className="text-sm text-muted-foreground mb-1">College Tier</div>
-                    <div className="text-lg font-semibold font-poppins">Tier 1 - Tier 3</div>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <div className="text-sm text-muted-foreground mb-1">Academic Score</div>
-                    <div className="text-lg font-semibold font-poppins">7.5+ CGPA</div>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
                     <div className="text-sm text-muted-foreground mb-1">Loan Amount</div>
-                    <div className="text-lg font-semibold font-poppins">₹2L - ₹50L</div>
+                    <div className="text-2xl font-semibold font-poppins">₹5,00,000</div>
+                  </div>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <div className="text-sm text-muted-foreground mb-1">Interest Rate</div>
+                    <div className="text-2xl font-semibold font-poppins">8.5%</div>
+                  </div>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <div className="text-sm text-muted-foreground mb-1">Loan Term</div>
+                    <div className="text-2xl font-semibold font-poppins">5 Years</div>
                   </div>
                   <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
-                    <div className="text-sm text-primary mb-1">Approval Time</div>
-                    <div className="text-lg font-semibold font-poppins text-primary">3-5 Days</div>
+                    <div className="text-sm text-primary mb-1">Monthly EMI</div>
+                    <div className="text-2xl font-semibold font-poppins text-primary">₹10,251</div>
                   </div>
                 </div>
-                <a href="#eligibility-form" className="btn-primary inline-flex items-center">
-                  Check My Eligibility
+                <a href="#calculator-full" className="btn-primary inline-flex items-center">
+                  Try Full Calculator
                   <ArrowRight size={18} className="ml-2" />
                 </a>
               </div>
               <div className="hidden md:block">
                 <img 
-                  src="https://images.unsplash.com/photo-1560523159-4a9692d222f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Student checking eligibility" 
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2011&q=80" 
+                  alt="Student planning finances" 
                   className="rounded-lg shadow-lg object-cover w-full h-80"
                 />
               </div>
@@ -112,52 +112,6 @@ const Hero = () => {
                   Plan My Repayment
                   <ArrowRight size={18} className="ml-2" />
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* EMI Calculator Section */}
-        <div id="calculator" className="mt-16 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-eduBlue-500/20 to-eduTeal-500/20 rounded-xl transform rotate-1"></div>
-          <div className="relative bg-card shadow-xl p-6 md:p-8 rounded-xl">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold font-poppins mb-4">
-                  Get a quick estimate for your student loan
-                </h2>
-                <p className="text-muted-foreground mb-6">
-                  Our EMI calculator helps you understand your repayment schedule before you commit to a loan.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="bg-muted p-4 rounded-lg">
-                    <div className="text-sm text-muted-foreground mb-1">Loan Amount</div>
-                    <div className="text-2xl font-semibold font-poppins">₹5,00,000</div>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <div className="text-sm text-muted-foreground mb-1">Interest Rate</div>
-                    <div className="text-2xl font-semibold font-poppins">8.5%</div>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <div className="text-sm text-muted-foreground mb-1">Loan Term</div>
-                    <div className="text-2xl font-semibold font-poppins">5 Years</div>
-                  </div>
-                  <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
-                    <div className="text-sm text-primary mb-1">Monthly EMI</div>
-                    <div className="text-2xl font-semibold font-poppins text-primary">₹10,251</div>
-                  </div>
-                </div>
-                <a href="#calculator-full" className="btn-primary inline-flex items-center">
-                  Try Full Calculator
-                  <ArrowRight size={18} className="ml-2" />
-                </a>
-              </div>
-              <div className="hidden md:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2011&q=80" 
-                  alt="Student planning finances" 
-                  className="rounded-lg shadow-lg object-cover w-full h-80"
-                />
               </div>
             </div>
           </div>

@@ -23,21 +23,6 @@ const WhatWeOffer = () => {
       icon: Briefcase,
       title: "Internship Based Repayment",
       description: "Our network of partner companies offers internship opportunities that can help you repay your educational loans."
-    },
-    {
-      icon: Calculator,
-      title: "EMI Calculator",
-      description: "Plan your finances with our easy-to-use EMI calculator and understand your repayment schedule."
-    },
-    {
-      icon: CalendarClock,
-      title: "Flexible Repayment Options",
-      description: "Choose from various repayment schedules based on your career trajectory and financial situation."
-    },
-    {
-      icon: School,
-      title: "Educational Resources",
-      description: "Access comprehensive guides about student loans, financial literacy, and educational financing."
     }
   ];
 
@@ -68,7 +53,7 @@ const WhatWeOffer = () => {
       </div>
       
       <div className="mt-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
